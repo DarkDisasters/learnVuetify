@@ -7,5 +7,9 @@ Vue.use(Vuetify);
 export default new Vuetify({
     icons:{
         iconfont: 'md',
+        theme:{
+            primary: '#9652ff',
+            success: '#3cd1c2'
+        }
     }
 });
