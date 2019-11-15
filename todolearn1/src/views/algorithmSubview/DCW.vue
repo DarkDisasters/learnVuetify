@@ -1,5 +1,8 @@
 <template class="dcw">
-    <h1>DCW Algorithm</h1>
+    <div>
+        <h1>DCW Algorithm</h1>
+    </div>
+    
 </template>
 
 <script>

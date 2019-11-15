@@ -1,5 +1,8 @@
 <template class="pca">
-    <h1>PCA Algorithm</h1>
+    <div class="pca">
+        <h1>PCA Algorithm</h1>
+    </div>
+    
 </template>
 
 <script>

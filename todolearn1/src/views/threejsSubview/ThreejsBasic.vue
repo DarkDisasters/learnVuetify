@@ -1,5 +1,8 @@
-<template class="threejsclass">
-    <h1>Threejs Basic</h1>
+<template>
+    <div class="threejsclass">
+        <h1>Threejs Basic</h1>
+    </div>
+    
 </template>
 
 <script>

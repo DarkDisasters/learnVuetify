@@ -1,5 +1,8 @@
-<template class="shadow">
-    <h1>Shadow</h1>
+<template>
+    <div class="shadow">
+        <h1>Shadow</h1>
+    </div>
+    
 </template>
 
 <script>

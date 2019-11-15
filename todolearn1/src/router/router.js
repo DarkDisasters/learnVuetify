@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import PythonBasic from '@/views/pythonSubview/PythonBasic'
-import ThreejsBasic from '../views/threejsSubview/ThreejsBasic'
+import ThreejsBasic from '@/views/threejsSubview/ThreejsBasic'
 
 
 Vue.use(VueRouter)

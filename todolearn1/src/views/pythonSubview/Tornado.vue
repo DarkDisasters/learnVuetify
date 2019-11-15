@@ -1,5 +1,8 @@
-<template class="tornado">
-    <h1>Tornado</h1>
+<template>
+    <div class="tornado">
+        <h1>Tornado</h1>
+    </div>
+    
 </template>
 
 <script>
