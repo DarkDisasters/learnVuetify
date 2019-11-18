@@ -1,7 +1,7 @@
 <template>
     <div class="tornado">
-        <v-container>
-            <v-row class="mb-6">
+        <v-container class="my-5">
+            <v-row>
                 <v-col sm="12" md="6">
                     <v-card>
                         <v-btn outlined block class="primary">1</v-btn>
