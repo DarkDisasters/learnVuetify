@@ -9,6 +9,32 @@
 
             <v-spacer></v-spacer>
 
+            <v-menu offset-y :close-on-content-click="false">
+                <template v-slot:activator="{ on }">
+                    <v-btn text color="grey" v-on="on">
+                        <v-icon left>expand_more</v-icon>
+                        <span>Menu</span>
+                    </v-btn>
+                </template>
+
+                <v-list>
+                    <v-list-group v-for="item in items" :key="item.title">
+                        <template v-slot:activator>
+                            <v-list-item-content>
+                                <v-list-item-title class="grey--text" v-text="item.title"></v-list-item-title>
+                            </v-list-item-content>
+                        </template>
+
+                        <v-list-item v-for="subItem in item.items" :key="subItem.title" router :to="subItem.route" dense>
+                            <v-list-item-content>
+                                <v-list-item-title class="grey--text" v-text="subItem.title"></v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list-group>
+                    
+                </v-list>
+            </v-menu>
+
             <v-btn text color='grey'>
                 <span>Sign out</span>
                 <v-icon right>exit_to_app</v-icon>
@@ -16,6 +42,24 @@
         </v-app-bar>
 
         <v-navigation-drawer app v-model="drawer" class="indigo">
+            <v-col>
+                <v-row justify="center" class="mt-5">
+                    <!-- <v-col class="mt-5 text-sm-center">0 -->
+                        <v-avatar size="100">
+                            <img src="/avatar-1.png" alt="">
+                        </v-avatar>
+                </v-row>
+
+                <v-row justify="center">
+                    <p class="white--text subheading my-1">XiXiWang</p>
+                </v-row>
+
+                <v-row justify="center" class="mt-4 mb-1">
+                    <Popup />
+                </v-row>
+            </v-col>
+
+
             <v-list>
                 <v-list-group v-for='item in items' :key='item.title' v-model='item.active' router :to="item.route">
                     <!-- 将子组件的信息传给父组件使用，这些属性会被挂在父组件 -->
@@ -31,6 +75,9 @@
                     </template>
 
                     <v-list-item v-for="subItem in item.items" :key="subItem.title" router :to="subItem.route">
+                        <v-list-item-action>
+                            <v-icon></v-icon>
+                        </v-list-item-action>
                         <v-list-item-content>
                             <v-list-item-title class="white--text" v-text="subItem.title"></v-list-item-title>
                         </v-list-item-content>
@@ -44,7 +91,12 @@
 
 
 <script>
+import Popup from './Popup'
+
 export default {
+    components:{
+        Popup,
+    },
     data(){
         return {
             'drawer': false,

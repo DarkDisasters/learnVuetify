@@ -6,6 +6,7 @@ import Tornado from '@/views/pythonSubview/Tornado'
 import ThreejsBasic from '@/views/threejsSubview/ThreejsBasic'
 import Shadow from '@/views/threejsSubview/Shadow'
 import Pca from '../views/algorithmSubview/Pca'
+import Dcw from '@/views/algorithmSubview/Dcw'
 
 
 Vue.use(VueRouter)
@@ -40,6 +41,11 @@ const routes = [
     path: '/algorithm/pca',
     name: 'PCA',
     component: Pca
+  },
+  {
+    path: '/algorithm/dcw',
+    name: 'DCW',
+    component: Dcw
   }
 ]
 
